@@ -1,0 +1,49 @@
+<svg width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SONAT Offshore global presence</title>
+  <desc id="desc">A dotted world map showing locations in Egypt, the United Arab Emirates, and Singapore.</desc>
+  <defs>
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#5E94BE" opacity=".82"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.2s ease-out infinite; }
+    .pulse.uae { animation-delay: .55s; }
+    .pulse.singapore { animation-delay: 1.1s; }
+    @keyframes pulse { 0% { opacity: .85; transform: scale(.35); } 70%,100% { opacity: 0; transform: scale(2.7); } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: .28; transform: scale(1.7); } }
+  </style>
+
+  <g fill="url(#dots)">
+    <path d="M118 95l42-29 68-7 47 17 47 2 49 31 58 17 28 43-18 35-48 10-21 33-41-3-19-25-39 3-26-31-44-15-26-38-46-9-11-34z"/>
+    <path d="M338 239l38 13 27 31 30 27 9 45-17 35-12 52-25 47-24-10-14-51-22-42-4-49-24-41 10-36 28-21z"/>
+    <path d="M543 58l36-19 47 8 14 30-32 23-47-4-18-38z"/>
+    <path d="M724 100l45-34 77-3 36 20 48-13 72 13 45-18 75 15 62-3 75 26 87 2 52 27-31 26-67 2-23 21-73 8-37 31-59-3-23 21-39-4-38 16-48-23-43 5-38-32-54-6-49-31-44-18-26-39z"/>
+    <path d="M765 183l61-16 70 20 35 31 2 52-32 35-13 55-38 58-34-14-20-50-30-40-24-55 8-46 15-30z"/>
+    <path d="M1105 224l46-12 39 14 23 34-20 22-37-11-29-23-22-24z"/>
+    <path d="M1220 252l33-8 24 14 22 38-23 27-25-14-12-28-19-29z"/>
+    <path d="M1267 339l48-17 59 7 42 33 2 43-44 25-54-12-34-36-19-43z"/>
+    <path d="M1454 400l18-8 13 19-9 22-20-7-2-26z"/>
+  </g>
+
+  <path d="M859 218C914 204 954 213 1005 235C1077 266 1140 298 1229 326" stroke="#E3B400" stroke-width="2" stroke-dasharray="7 8" opacity=".92"/>
+
+  <g font-family="Arial, sans-serif" fill="#F0F0F0">
+    <g transform="translate(859 218)">
+      <circle class="pulse" r="13" fill="#E3B400"/><circle r="10" fill="#E3B400" opacity=".2" filter="url(#glow)"/><circle r="5.5" fill="#E3B400"/>
+      <text x="-62" y="-20" font-size="16" letter-spacing="2">EGYPT</text>
+    </g>
+    <g transform="translate(1005 235)">
+      <circle class="pulse uae" r="13" fill="#E3B400"/><circle r="8" stroke="#E3B400" stroke-width="2"/><circle r="3.5" fill="#E3B400"/>
+      <text x="18" y="-3" font-size="16" letter-spacing="2">U.A.E.</text><text x="18" y="17" font-size="11" fill="#91A0B2" letter-spacing="1.5">IN PROGRESS</text>
+    </g>
+    <g transform="translate(1229 326)">
+      <circle class="pulse singapore" r="13" fill="#E3B400"/><circle r="8" stroke="#E3B400" stroke-width="2"/><circle r="3.5" fill="#E3B400"/>
+      <text x="20" y="-3" font-size="16" letter-spacing="2">SINGAPORE</text><text x="20" y="17" font-size="11" fill="#91A0B2" letter-spacing="1.5">IN PROGRESS</text>
+    </g>
+  </g>
+</svg>
