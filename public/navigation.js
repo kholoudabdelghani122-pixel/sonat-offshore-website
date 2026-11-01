@@ -43,7 +43,14 @@ setActiveNavigation(window.location.hash);
 function updateStickyHeader() {
   if (!siteHeader) return;
 
-  const stickyStart = heroImage
+  const legalPage = document.body.classList.contains("legal-page");
+  const stickyStart = legalPage
+    ? window.matchMedia("(max-width: 640px)").matches
+      ? 12
+      : window.matchMedia("(max-width: 1100px)").matches
+        ? 20
+        : 32
+    : heroImage
     ? heroImage.getBoundingClientRect().top + window.scrollY
     : newsHero
       ? newsHero.getBoundingClientRect().top + window.scrollY + 32
