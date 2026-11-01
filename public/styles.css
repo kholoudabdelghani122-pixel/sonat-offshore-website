@@ -2708,7 +2708,7 @@ a {
 }
 
 .platform-showcase__visual--project {
-  background: #eeeff0 url("assets/platform-projectos-background.png") center / cover no-repeat;
+  background: #eeeff0;
 }
 
 .enterprise-foundations {
